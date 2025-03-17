@@ -35,6 +35,7 @@
               <arrow-right-icon class="icon" />
             </div>
           </div>
+
           <div class="portfolio-item">
             <div class="portfolio-content">
               <h3 class="portfolio-title">Simple-Weather-App</h3>
@@ -42,7 +43,7 @@
             </div>
             <img src="../assets/Simple-Weather-App.png" class="portfolio-image-placeholder"></div>
             <div class="link-container">
-              <a href="https://https://nameless-weatherapp.web.val.run" class="project-link">view</a>
+              <a href="https://nameless-weatherapp.web.val.run" class="project-link">view</a>
               <arrow-right-icon class="icon" />
             </div>
           </div>
