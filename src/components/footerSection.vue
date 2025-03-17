@@ -4,7 +4,7 @@
         <div class="logo">
           <img src="../assets/ron22.png" alt="Ronald Mweema" class="logo-placeholder" />
         </div>
-        <p class="footer-text">Powered by nothing. Just a human.</p>
+        <p class="footer-text">Powered by Ronald Mweema</p>
         <div class="social-links">
           <a href="#" class="social-link">
             <twitter-icon class="icon" />
