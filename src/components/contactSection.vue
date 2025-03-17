@@ -7,7 +7,7 @@
           <p class="contact-description">
             I'm a passionate web developer with more than 3 years of experience in application development, interface design, and user experience.
           </p>
-          <a href="mailto:contact@example.com" class="link-yellow">
+          <a href="mailto:ronaldmweema@gmail.com" class="link-yellow">
             Ron's_Blog.com
             <arrow-right-icon class="icon" />
           </a>
