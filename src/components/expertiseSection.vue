@@ -7,7 +7,7 @@
           I'm a passionate web developer with more than 5 years of experience in application development, interface design, and user experience.
         </p>
         <a href="#contact" class="link-yellow">
-          hezalabs.com
+          Ron's_Blog.com
           <arrow-right-icon class="icon" />
         </a>
       </div>

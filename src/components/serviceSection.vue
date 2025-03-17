@@ -5,17 +5,17 @@
           <div class="service-card yellow">
             <circle-icon class="service-icon" />
             <h3 class="service-title">Product Designer</h3>
-            <p class="service-count">124 Projects</p>
+            <p class="service-count">9Projects</p>
           </div>
           <div class="service-card">
             <tag-icon class="service-icon" />
             <h3 class="service-title">Branding Designer</h3>
-            <p class="service-count">37 Projects</p>
+            <p class="service-count">3 Projects</p>
           </div>
           <div class="service-card">
             <monitor-icon class="service-icon" />
             <h3 class="service-title">Full Stack Developer</h3>
-            <p class="service-count">42 Projects</p>
+            <p class="service-count">4 Projects</p>
           </div>
         </div>
       </div>
