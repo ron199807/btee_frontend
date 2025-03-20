@@ -20,7 +20,7 @@
       <!-- Comment Form -->
       <form @submit.prevent="addComment">
         <input v-model="newComment.name" type="text" placeholder="Your Name" required />
-        <textarea v-model="newComment.message" placeholder="Your Comment" required></textarea>
+        <!-- <textarea v-model="newComment.message" placeholder="Your Comment" required></textarea> -->
         <button type="submit">Submit</button>
       </form>
     </div>
@@ -37,9 +37,9 @@ export default {
       //image: "",  
       comments: [],
       newComment: {
-        name: "",
-        message: "",
-      },
+      name: "",
+      message: "",
+     },
     };
   },
   async created() {
@@ -140,7 +140,7 @@ input,
 textarea {
   margin-bottom: 10px;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #4a4949;
   border-radius: 5px;
 }
 
