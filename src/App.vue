@@ -6,7 +6,7 @@
     <CreativeSection />
     <ServiceSection />
     <PortfolioSection />
-    <BlogSection />
+    <!-- <BlogSection /> -->
     <TestimonialSection />
     <ContactSection />
     <FooterSection />
@@ -19,7 +19,7 @@
 import TestimonialSection from './components/testimonialSection.vue';
 import FooterSection from './components/footerSection.vue';
 import ContactSection from './components/contactSection.vue';
-import BlogSection from './components/blogSection.vue';
+//import BlogSection from './components/blogSection.vue';
 import PortfolioSection from './components/portfolioSection.vue';
 import ServiceSection from './components/serviceSection.vue';
 import CreativeSection from './components/creativeSection.vue';
@@ -35,7 +35,7 @@ export default {
     CreativeSection,
     ServiceSection,
     PortfolioSection,
-    BlogSection,
+   // BlogSection,
     TestimonialSection,
     ContactSection,
     FooterSection,
