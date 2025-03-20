@@ -1,13 +1,14 @@
 <template>
   <div class="blog-post">
     <!-- Blog Content -->
-    <h1>{{ title }}</h1>
+     <h3 class="page-name">Ron's Blog</h3>
+    <h4>{{ title }}</h4>
     <img v-if="image" :src="image" alt="Blog Post Image" class="post-image" />
     <p>{{ content }}</p>
 
     <!-- Comment Section -->
     <div class="comments">
-      <h2>Comments</h2>
+      <h6>Comments</h6>
       <ul v-if="comments.length">
         <li v-for="(comment, index) in comments" :key="index">
           <strong>{{ comment.name }}</strong>: {{ comment.message }}
@@ -32,8 +33,8 @@ export default {
   data() {
     return {
       title: "",
-      content: "",
-      image: "",  
+      //content: "",
+      //image: "",  
       comments: [],
       newComment: {
         name: "",
@@ -42,18 +43,18 @@ export default {
     };
   },
   async created() {
-    await this.fetchBlogPost();
+    await this.fetchBlogPost()
   },
   methods: {
     async fetchBlogPost() {
       try {
-        const response = await axios.get("http://localhost:8000/api/posts/1/"); // Replace 1 with the post ID
+        const response = await axios.get("http://localhost:8000/api/posts/2/")
         this.title = response.data.title;
-        this.content = response.data.content;
-        this.image = response.data.image ? `http://localhost:8000${response.data.image}` : "";  // Add this line
-        this.comments = response.data.comments;
+        // this.content = response.data.content;
+        // this.image = response.data.image ? `http://localhost:8000${response.data.image}` : ""
+        this.comments = response.data.comments
       } catch (error) {
-        console.error("Error fetching blog post:", error);
+        console.error("Error fetching blog post:", error)
       }
     },
     async addComment() {
@@ -82,14 +83,18 @@ export default {
 
 <style scoped>
 .blog-post {
-  max-width: 800px;
+  max-width: 80rem;
   margin: 0 auto;
   padding: 20px;
   font-family: Arial, sans-serif;
 }
 
-h1 {
-  font-size: 2.5rem;
+.page-name{
+  text-align: center;
+}
+
+h4 {
+  
   margin-bottom: 20px;
 }
 

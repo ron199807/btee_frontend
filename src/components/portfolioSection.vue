@@ -17,7 +17,7 @@
               <h3 class="portfolio-title">fitness app</h3>
               <p class="portfolio-category">Created with React</p>
             </div>
-            <img src="../assets/workout-plan.jpg" alt="fitness image" class="portfolio-image-placeholder" />
+            <img src="../assets/fitnes2.webp" alt="fitness image" class="portfolio-image-placeholder" />
             <div class="link-container">
               <a href="https://nameless-trackingsystem.web.val.run" class="project-link">view</a>
               <arrow-right-icon class="icon" />
@@ -29,7 +29,7 @@
               <h3 class="portfolio-title"></h3>
               <p class="portfolio-category">Global cuisines</p>
             </div>
-            <img src="../assets/global-cuisines.png" class="portfolio-image-placeholder" />
+            <img src="../assets/food.jpg" class="portfolio-image-placeholder" />
             <div class="link-container">
               <a href="https://nameless-globalcuisinesite.web.val.run" class="project-link">view</a>
               <arrow-right-icon class="icon" />
@@ -41,7 +41,7 @@
               <h3 class="portfolio-title">Simple-Weather-App</h3>
               <p class="portfolio-category">Product Developer</p>
             </div>
-            <img src="../assets/Simple-Weather-App.png" class="portfolio-image-placeholder"></div>
+            <img src="../assets/clouds.jpg" class="portfolio-image-placeholder"></div>
             <div class="link-container">
               <a href="https://nameless-weatherapp.web.val.run" class="project-link">view</a>
               <arrow-right-icon class="icon" />

@@ -30,6 +30,6 @@
   }
 
   .title{
-    margin: auto;
+    text-align: center;
   }
   </style>

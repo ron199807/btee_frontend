@@ -32,7 +32,7 @@
               <textarea id="testimonial" name="testimonial" maxlength="30" placeholder="Max 30 words"></textarea>
             </div>
             <button type="submit" class="btn-submit">
-              <arrow-right-icon class="icon" />
+              Submit
             </button>
           </form>
         </div>
