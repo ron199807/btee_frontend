@@ -19,5 +19,5 @@
   </script>
   
   <style scoped>
-  /* Add scoped styles for the expertise component */
+  
   </style>

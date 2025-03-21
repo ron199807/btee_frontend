@@ -24,5 +24,5 @@
   </template>
   
   <style scoped>
-  /* Add scoped styles for the creative component */
+  
   </style>

@@ -28,5 +28,5 @@
   </script>
   
   <style scoped>
-  /* Add scoped styles for the services component */
+ 
   </style>
