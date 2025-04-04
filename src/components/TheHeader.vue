@@ -7,8 +7,7 @@
         <nav class="navigation">
           <ul>
             <li class="active"><a href="#services">Services</a></li>
-            <li><a href="#works">Works</a></li>
-            <li><a href="#blog">Blog</a></li>
+            <li><a href="#works">Portfolio</a></li>
           </ul>
         </nav>
       </div>
