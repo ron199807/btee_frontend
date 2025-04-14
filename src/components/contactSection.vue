@@ -1,18 +1,14 @@
 <template>
-  <section class="contact" id="contact">
+  <section class="contact slide-in-left" id="contact">
     <div class="container">
       <div class="contact-grid">
-        <div class="contact-info">
+        <div class="contact-info slide-in-right">
           <h2 class="contact-title">Got a project? Let's talk.</h2>
           <p class="contact-description">
-            I'm a passionate web developer with more than 3 years of experience in application development, interface design, and user experience.
+            I'm a passionate web developer with more than 3+ years of experience in application development, interface design, and user experience.
           </p>
-          <a href="mailto:ronaldmweema@gmail.com" class="link-yellow">
-            Ron's_Blog.com
-            <arrow-right-icon class="icon" />
-          </a>
         </div>
-        <div class="contact-form">
+        <div class="contact-form slide-in-left">
           <h2 class="contact-title">Estimate your project? Let me know here.</h2>
           <form @submit.prevent="submitForm">
             <div class="form-group">
@@ -26,10 +22,6 @@
             <div class="form-group">
               <textarea id="message" name="message" v-model="formData.message" required placeholder=" "></textarea>
               <label for="message">Tell me about your project</label>
-            </div>
-            <div class="form-group">
-              <textarea id="testimonial" name="testimonial" v-model="formData.testimonial" maxlength="30" placeholder=" "></textarea>
-              <label for="testimonial">Share a testimonial (optional) <span class="hint">Max 30 words</span></label>
             </div>
             <button type="submit" class="btn-submit" :disabled="isLoading" :class="{ loading: isLoading }">
               <span class="btn-content">
@@ -63,7 +55,7 @@
 </template>
 
 <script setup>
-import { ArrowRight as ArrowRightIcon, CheckCircle as CheckCircleIcon, AlertCircle as AlertCircleIcon } from 'lucide-vue-next';
+import {CheckCircle as CheckCircleIcon, AlertCircle as AlertCircleIcon } from 'lucide-vue-next';
 import { ref } from 'vue';
 
 const formData = ref({
@@ -122,81 +114,110 @@ const submitForm = async () => {
 </script>
 
 <style scoped>
-/* Your existing styles remain untouched */
+.contact {
+  background-color: var(--color-darker);
+  padding: var(--spacing-section) 0;
+}
 
-/* Enhanced form styles */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.contact-title {
+  font-size: 1.8rem;
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+  color: var(--color-text);
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.contact-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 3rem;
+  height: 3px;
+  background: var(--sumit-btn);
+}
+
+.contact-description {
+  color: var(--color-text-muted);
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
 .form-group {
   position: relative;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 1rem;
-  border: 1px solid #e5e7eb;
-  border-radius: 0.375rem;
-  background-color: transparent;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 1rem 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--color-text);
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  transition: all 0.3s ease;
 }
 
 .form-group textarea {
   min-height: 120px;
-  resize: vertical;
+  resize: none;
 }
 
 .form-group label {
   position: absolute;
   top: 1rem;
-  left: 1rem;
-  color: #6b7280;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  transform-origin: left center;
+  left: 0;
+  color: var(--color-text-muted);
+  transition: all 0.3s ease;
   pointer-events: none;
-  background-color: white;
-  padding: 0 0.25rem;
-  margin-left: -0.25rem;
-}
-
-.hint {
-  color: #9ca3af;
-  font-size: 0.875rem;
-  font-weight: normal;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #eab308;
-  box-shadow: 0 0 0 3px rgba(234, 179, 8, 0.1);
+  border-color: var(--sumit-btn);
 }
 
 .form-group input:focus + label,
 .form-group textarea:focus + label,
 .form-group input:not(:placeholder-shown) + label,
 .form-group textarea:not(:placeholder-shown) + label {
-  transform: translateY(-1.75rem) scale(0.85);
-  color: #eab308;
-  background-color: white;
+  transform: translateY(-1.5rem) scale(0.85);
+  color: var(--sumit-btn);
 }
 
-/* Button styles */
 .btn-submit {
-  position: relative;
-  padding: 0.75rem 2rem;
-  background-color: #eab308;
-  color: white;
+  background: var(--sumit-btn);
+  color: var(--color-text);
   border: none;
+  padding: 0.75rem 2rem;
   border-radius: 0.375rem;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  margin-top: 1rem;
 }
 
 .btn-submit:hover:not(:disabled) {
-  background-color: #ca8a04;
-  transform: translateY(-1px);
+  background-color: #369f6e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(66, 185, 131, 0.2);
 }
 
 .btn-submit:disabled {
@@ -209,7 +230,6 @@ const submitForm = async () => {
   align-items: center;
   justify-content: center;
   position: relative;
-  height: 100%;
 }
 
 .btn-text {
@@ -225,7 +245,7 @@ const submitForm = async () => {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.25rem;
+  gap: 0.5rem;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -235,9 +255,9 @@ const submitForm = async () => {
 }
 
 .loader-dot {
-  width: 6px;
-  height: 6px;
-  background-color: white;
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-text);
   border-radius: 50%;
   animation: bounce 1.4s infinite ease-in-out both;
 }
@@ -253,34 +273,30 @@ const submitForm = async () => {
 @keyframes bounce {
   0%, 80%, 100% { 
     transform: scale(0);
-    opacity: 0.5;
   }
   40% { 
     transform: scale(1);
-    opacity: 1;
   }
 }
 
-/* Message styles */
 .message {
   display: flex;
   align-items: center;
   gap: 0.75rem;
   padding: 1rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   border-radius: 0.375rem;
   font-size: 0.9375rem;
-  animation: slideIn 0.3s ease-out forwards;
 }
 
 .success-message {
-  background-color: rgba(74, 222, 128, 0.1);
-  color: #16a34a;
-  border-left: 3px solid #16a34a;
+  background-color: rgba(66, 185, 131, 0.1);
+  color: var(--sumit-btn);
+  border-left: 3px solid var(--sumit-btn);
 }
 
 .error-message {
-  background-color: rgba(248, 113, 113, 0.1);
+  background-color: rgba(220, 38, 38, 0.1);
   color: #dc2626;
   border-left: 3px solid #dc2626;
 }
@@ -296,14 +312,24 @@ const submitForm = async () => {
   transform: translateY(-10px);
 }
 
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
+@media (max-width: 992px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  
+  .contact-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-title {
+    font-size: 1.3rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
   }
 }
 </style>
